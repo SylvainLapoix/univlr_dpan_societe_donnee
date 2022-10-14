@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>Exploration de la société de la donnée</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Sylvain Lapoix (Datactivist)" />
+    <meta name="date" content="2022-12-10" />
+    <script src="libs/header-attrs-2.16/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/datactivist.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/datactivist-fonts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/SylvainLapoix/slides_datactivist/master/bonus_styles.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Exploration de la société de la donnée
+## 2 - la collecte des données
+### Sylvain Lapoix (Datactivist)
+### 12/10/2022
+
+---
+
+
+layout: true
+  
+
+&lt;div class='my-footer'&gt;&lt;span&gt;Univ LR - Master DPAN - Société de la donnée 2&lt;/span&gt; &lt;center&gt;&lt;div class=logo&gt;&lt;img src='https://github.com/datactivist/slides_datactivist/raw/master/inst/rmarkdown/templates/xaringan/resources/img/fond_noir_monochrome.png' width='100px'&gt;&lt;/center&gt;&lt;/span&gt;&lt;/div&gt; 
+
+
+&lt;style type="text/css"&gt;
+
+.lr_bg{
+  background: black;
+  color: #f7c600;
+  font-weight: bold;
+}
+
+.pull-left-wide {
+  width: 65%;
+  float: left;
+}
+
+.pull-right-wide {
+  width: 65%;
+  float: right;
+}
+
+.pull-right-narrow {
+  width: 30%;
+  float: right;
+}
+
+.pull-left-narrow {
+  width: 30%;
+  float: left;
+}
+
+.quote {
+  font-family: 'Rokkitt';
+  font-weight: bold;
+  font-style: italic;
+  font-size: 28px;
+}
+
+
+.yellow-h{
+  background: #ffff88;
+}
+
+.blue-h{
+  background: #83c7fc;
+}
+
+
+.white-h{
+   color: #000000;
+   background: #FFFFFF;
+}
+
+.black-h{
+   color: #FFFFFF;
+   background: #000000;
+}
+
+
+&lt;/style&gt;
+
+
+---
+
+background-image: url("https://media.giphy.com/media/xT9C25UNTwfZuk85WP/giphy-downsized-large.gif")
+background-size: contains
+class: inverse
+
+# I. Evaluation du périmètre
+
+---
+
+class: inverse
+
+### Tentons de deviner
+
+A votre avis : quelles sont, dans l'ordre, les trois apps de votre smartphone qui captent la plus grande quantité de données ?
+
+.center[
+![](https://media.giphy.com/media/3o7TKDuhKlzLtQExbO/giphy.gif)
+]
+
+--
+
+.quote[
+* Ecrivez votre classement sur un papier
+* pliez-le et écrivez votre nom dessus
+* remettez-le à Sylvain, alias "le prof"]
+
+---
+
+## Une tentative de rationnalisation
+
+Deux façons de décrire les données captées par les apps :
+
+.pull-left[**Quantitative**
+
+Nous parlons ici de **la quantité de données transférées dans l'absolu**.
+
+Tout fichier pouvant être ramené à une occupation mémoire, quel qu'en soit le type, nous pouvons tenter de mesurer la quantité de données collectées par ce biais.
+
+Il implique cependant des biais fort (rapport poids entre image et texte, notamment).
+
+]
+
+.pull-right[**Qualitative**
+
+Plusieurs types de données peuvent être récupérées par les apps :
+
+* fichier issus du système (photos, contacts, SMS, mails ...) ;
+* données issues des capteurs (GPS, accéléromètre ... ) ;
+* données issues des périphériques médias (caméra et micro) ;
+* etc.
+
+]
+
+---
+
+background-image: url("https://media.giphy.com/media/5zoxhCaYbdVHoJkmpf/giphy.gif")
+background-size: contains
+class: inverse, center
+
+## Partie 1 : quantitatif
+
+---
+
+background-image: url("https://media.giphy.com/media/IgSbum3io6QikjzSkd/giphy.gif")
+background-size: contains
+class: inverse, center
+
+
+### Notre sésame : le "bien être"
+
+---
+
+class: inverse
+
+### L'effet "Derrière nos écrans de fumée"
+
+.center[
+![](img/derriere_nos_ecrans_de_fumee.png)
+]
+
+En 2020, le documentaire [Derrière nos écrans de fumée](https://www.youtube.com/watch?v=LrDXbCrSR68) (The social dilemma) relance le débat sur l'effet des applications, s'appuyant notamment sur le témoignage des "repentis de la tech".
+
+---
+
+### Parenthèse SHS : un traitement qui n'est pas sans angle mort
+
+.center[
+![](img/serge_tisseron.png)
+]
+
+Ex. : Serge Tisseron, psychiatre, via [Urbania](https://www.youtube.com/watch?v=LrDXbCrSR68).
+
+---
+
+### Les interfaces "bien être" et gestion
+
+.pull-left[
+Tous vos smartphones disposent de diverses interfaces qui vous permettent d'accéder à des données d'usage de votre téléphone :
+
+* usage de la batterie ;
+* usage des données.
+
+A cela s'ajoute les paramètres bien être qui donnent un renseignement complémentaire :
+
+* temps d'usage.
+]
+
+.pull-right[
+.center[
+![](./img/bien_etre_numerique.png)
+]
+]
+
+
+---
+
+### Proposition de méthode
+
+.pull-left[
+**1. collecte de données d'usage**
+
+![](img/exemple_data.png)
+]
+
+.pull-right[
+**2. visualisation**
+
+.center[
+![](img/exemple_datawrapper.png)
+]
+]
+
+---
+
+### 1. Utilisation des données
+
+.pull-left[
+![](./img/conso_donnees_mobiles.png)
+]
+
+.pull-right[
+* Source : interface gestion des réseaux ;
+* Unité : mégaoctets ;
+* Biais : peut se limiter aux seules données de réseau mobile, négligeant les données WiFi.
+]
+
+
+---
+
+### 2. Temps d'utilisation
+
+.pull-left[
+![](./img/temps_usage_app.png)
+]
+
+.pull-right[
+* Source : interface "bien être" ;
+* Unité : heures / minutes ;
+* Biais : le point de référence peut être différent (semaine complète, journée, etc).
+]
+
+
+---
+
+### 3. Utilisation de la batterie
+
+.pull-left[
+![](./img/conso_batterie.png)
+]
+
+.pull-right[
+* Source : interface gestion de batterie ;
+* Unité : variable (pourcentage, temps) ;
+* Biais : indicateur peu standard, point de référence variable.
+]
+
+---
+
+### Exercice : quantification comparative de la consommation de données
+
+.quote[
+1. réunissez dans un tableur les données sur le max d'app ;
+2. formalisez-les dans [Datawrapper]() ;
+3. analysez ces résultats.
+]
+
+Présentation dans 20 minutes.
+
+
+---
+
+background-image: url("https://media.giphy.com/media/S72QEV5YfVl4mRrakS/giphy.gif")
+background-size: contains
+class: inverse, center
+
+## Partie 2 : qualitatif
+
+---
+
+### C'est quoi les trackers ?
+
+La youtubeuse et développeuse Amy Plant s'est penchée sur la question et propose une synthèse pratique et didactique des enjeux techniques sous-jacents dans sa vidéo : [Je traque un téléphone (caméra, micro, localisation, galerie photo trackers : explications)](https://www.youtube.com/watch?v=qbGEvj_jkNY).
+
+.center[
+![](img/amy_plant_trackers.png)
+]
+
+---
+
+### Le travail d'Exodus Privacy
+
+.center[
+![](./img/exodus_privacy_search.png)
+]
+
+Jettons un oeil à [leur moteur de recherche](https://reports.exodus-privacy.eu.org/fr/) pour voir ...
+
+---
+
+### Plusieurs modes de collecte
+
+Au delà des données fournies volontairement par les usager·ères via l'interface (**input**) et des données de fonctionnement (logs, credentials, etc.), les apps procèdent à deux types de collectes parallèles :
+
+.pull-left[
+**La collecte via des capteurs**
+
+* caméra ;
+* micro ;
+* accéléromètre / gyroscope ;
+* GPS ;
+* NFC ;
+* etc.
+
+]
+
+.pull-right[
+**La collecte via d'autres applications**
+
+* systèmes de fichier :
+  * contacts ;
+  * photos ;
+  * numéros appelés ;
+* contenus d'autres apps :
+  * réseaux sociaux ;
+  * gestionnaires (SMS, appel, etc.).
+
+]
+
+
+---
+
+
+background-image: url("https://media.giphy.com/media/3o6ZtfPLtu0KZmBQxq/giphy.gif")
+background-size: contains
+class: inverse, center
+
+
+### Vous allez rire : vous avez accès à ça aussi !
+
+---
+
+### "Permission to track"
+
+Les politiques de respect de la vie privée des systèmes d'exploitation obligent désormais les apps à solliciter une *"permission to track"* (cf. [Apple dev](https://developer.apple.com/app-store/user-privacy-and-data-use/)), autrement dit, une autorisation à capter certaines données.
+
+.center[
+![](./img/permission_tracking_apple.png)
+]
+
+---
+
+### La notion de "régime de partage"
+
+.pull-left[
+![](img/regime_de_partage.png)
+]
+
+.pull-right[
+Au delà de l'autorisation elle-même, les applications proposent différents *"régime de partage"*. Ces régimes déterminent les conditions dans lesquelles l'app peut récupérer les données d'une certaine source.
+
+On en distingue quatre principaux :
+
+* en permanence (arrière-plan) ;
+* en usage ;
+* à la demande ;
+* jamais.
+
+Mais le détail de à qui et pour quoi sont transférées les données n'est pas fourni.
+
+]
+
+---
+
+### Exercice : cartographie des autorisations
+
+.quote[
+
+]
+
+Présentation dans 20 minutes.
+
+---
+
+background-image: url("https://media.giphy.com/media/l0Hlx0M5OI1ogTGo0/giphy.gif")
+background-size: contains
+class: inverse
+
+# II. Le cadre juridique
+
+---
+
+background-image: url("https://media.giphy.com/media/WS3kQlip00vwV8CXwQ/giphy.gif")
+background-size: contains
+class: inverse
+
+## Connaissez-vous le RGPD ?
+
+
+---
+
+background-image: url("https://media.giphy.com/media/ZExxJPLQp1il0j115N/giphy.gif")
+background-size: contains
+class: inverse
+
+## Et si nous lisions les conditions générales d'utilisation de vos données ?
+
+---
+
+### Exercice : tentative de lecture contextuelle des CGUs
+
+.quote[
+Suivant la liste d'applications sélectionnées :
+
+1. listez les occurrences du mot "data" / "données" pour relever la phrase où le terme est utilisé et la partie des règles ;
+2. proposez une traduction en français courant en documentant le contexte.
+]
+
+Rendez-vous dans 30 minutes !
+
+---
+
+background-image: url("")
+background-size: contains
+class: inverse
+
+## Le RGPD
+
+---
+
+class: center, middle, inverse
+
+### Merci pour votre attention !
+
+#### *Contact : [Sylvain Lapoix](mailto:sylvain@datactivist.coop)*
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"highlightSpans": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

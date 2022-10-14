@@ -1,0 +1,539 @@
+---
+title: "Exploration de la société de la donnée"
+subtitle: "1 - la socialisation par la donnée"
+author: "Sylvain Lapoix (Datactivist)"
+date: "20/09/2022"
+output:
+  SlidesDatactivist::moon_reader:
+    css:
+      - default
+      - datactivist
+      - datactivist-fonts
+      - https://raw.githubusercontent.com/SylvainLapoix/slides_datactivist/master/bonus_styles.css
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      highlightSpans: true
+      countIncrementalSlides: false
+params:
+  event: Univ LR - Master DPAN - Société de la donnée 1
+
+---
+
+layout: true
+  
+
+`r paste0("<div class='my-footer'><span>", params$event, "</span> <center><div class=logo><img src='https://github.com/datactivist/slides_datactivist/raw/master/inst/rmarkdown/templates/xaringan/resources/img/fond_noir_monochrome.png' width='100px'></center></span></div>")` 
+
+
+<style type="text/css">
+
+.lr_bg{
+  background: black;
+  color: #f7c600;
+  font-weight: bold;
+}
+
+.pull-left-wide {
+  width: 65%;
+  float: left;
+}
+
+.pull-right-wide {
+  width: 65%;
+  float: right;
+}
+
+.pull-right-narrow {
+  width: 30%;
+  float: right;
+}
+
+.pull-left-narrow {
+  width: 30%;
+  float: left;
+}
+
+.quote {
+  font-family: 'Rokkitt';
+  font-weight: bold;
+  font-style: italic;
+  font-size: 28px;
+}
+
+
+.yellow-h{
+  background: #ffff88;
+}
+
+.blue-h{
+  background: #83c7fc;
+}
+
+
+.white-h{
+   color: #000000;
+   background: #FFFFFF;
+}
+
+.black-h{
+   color: #FFFFFF;
+   background: #000000;
+}
+
+
+</style>
+
+
+---
+
+background-image: url("https://media.giphy.com/media/xT9C25UNTwfZuk85WP/giphy-downsized-large.gif")
+background-size: contains
+class: inverse
+
+
+## I. La donnée : qui est-elle ? Quels sont ses réseaux ?
+
+---
+
+background-image: url("https://media.giphy.com/media/d1E1kn94NNfrlPGw/giphy.gif")
+background-size: contains
+class: inverse, center
+
+### Qu'est-ce que vous faîtes là ?
+
+---
+
+### Exercice : recensement par groupe
+
+.quote[**Listez les données qui vous ont amené ici**]
+
+*"Ici"* étant entendu comme **le Master DPAN de l'Unviersité de La Rochelle**, je vous demande de lister les données qui vont amènent à être présent·es aujourd'hui dans cette classe :
+
+* leur nature ;
+* leur provenance ;
+* la façon dont vous les avez fourni.
+
+.quote[Vous avez .red[10 minutes]].
+
+---
+
+background-image: url("https://media.giphy.com/media/Ot4U0KHw2fdvxJZ4jh/giphy-downsized-large.gif")
+background-size: contains
+class: inverse, center
+
+### C'est parti !
+
+---
+
+### Recensement par groupe - résultats
+
+.quote[Il est l'heure de restituer]
+
+--
+
+Constats :
+
+* il y a différentes perceptions de la donnée ;
+* il y a différentes perceptions de l'acte de fournir des données ;
+* certaines données ne sont pas perçues comme telles.
+
+---
+
+background-image: url("https://media.giphy.com/media/gr1ayQmhUafWE/giphy.gif")
+background-size: contains
+class: inverse, center
+
+class: inverse
+
+### Sondage : qu'entendez-vous par "data" ?
+
+---
+
+### Combien de données pouvons-nous récolter dans cette pièce ?
+
+--
+
+.center[
+![](https://media.giphy.com/media/SY2j8eBZjSPqv7Ggxt/giphy.gif)
+]
+
+Réponse : une infinité ! Car, par essence, **la donnée est .red[collectée].**
+
+---
+
+
+### La donnée est .red[fonctionnelle]
+
+Une donnée n'est ni gratuite, ni immanente.
+
+Produire de la donnée nécessite :
+* des moyens
+* des motivations
+* une méthode.
+
+Les données ne sont pas produites par hasard.
+
+--
+
+Il faut donc avoir une bonne raison de le faire.
+
+
+---
+
+### D'où vient l'heure officielle ?
+
+--
+
+.pull-left-wide[
+Le *"Greenwich Mean Time"* (**GMT**) fut établit par le Royal Observatory de Greenwich (à Londres). Il fut dans un premier temps utilisé comme référence maritime (bien que celle-ci resta largement solaire).
+
+Adopté par la Railway Clearing House en 1847 et par la plupart des compagnies de chemin de fer sous le nom de "*railway time"* ("heure ferroviaire"), il devint progressivement l'heure officielle au Royaume-Uni.
+
+Il existe donc un phénomène de contamination, d'un besoin sectoriel vers un usage généralisé qui détermine une nouvelle norme.
+]
+
+.pull-right-narrow[
+.reduite[
+![](https://raw.githubusercontent.com/SylvainLapoix/ipj_dataliteracy/master/presentation/img/greenwich_clock.jpg)
+]
+]
+
+
+
+---
+
+### La Bible : un best-seller plein de recensements
+
+**Dans l'Ancien Testament**
+* Le livre des Nombres comporte deux recensements ;
+* David est puni pour avoir dénombré Israël et Juda ;
+
+**Dans le Nouveau Testament**
+* c'est à l'occasion du recensement de l'Empereur Auguste que Marie et Joseph quittent Nazareth pour se rendre à Bethléem.
+
+--
+
+Le contexte politique est incertain mais plusieurs auteurs romains attestent de ce projet :
+Auguste souhaitait faire "un inventaire des ressources de son empire" : *"le nombre des citoyens et des alliés en armes, celui des flottes, des royaumes, des provinces"* (Tacite, Annales, 1,11)
+
+---
+
+### Lever les impôts et faire la guerre
+
+.pull-left[
+.quote[ *"combien et pourquoi"*, Vauban.]
+
+En 1676, Vauban ordonne le recensement de Valenciennes : le premier recensement *"tête par tête"* de l'histoire de France.
+
+Son objectif : *"actifs économiques et démographiques"*.
+
+.footnote[Source : [Vauban, inventeur des recensements](https://www.persee.fr/doc/adh_0066-2062_1975_num_1975_1_1282), Vilquin, 1975]
+]
+
+
+.pull-right[
+Recensement de la Nouvelle-France par Jean Talon (1666).
+![](https://raw.githubusercontent.com/SylvainLapoix/ipj_dataliteracy/master/presentation/img/recensement_jeantalon.jpeg)
+
+]
+
+---
+
+### Combien ça coûte un recensement ?
+
+--
+
+
+Le budget du recensement est fixé par la loi. En l'occurrence, [le décret du 17 décembre 2015](https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000031632586&categorieLien=id) :
+* 1.72€ par personne et 1.13€ par logement en "métropole" ;
+* 2.05€ par personne et 1.36€ par logement dans les départements d'Outre-Mer, Saint-Pierre-et-Miquelon, Saint-Barthélemy et Saint-Martin.
+
+Ces dernières années, le coût a totalisé environ 20 millions d'euros par an ([Sénat, 2017](https://www.senat.fr/questions/base/2017/qSEQ171202311.html)). Derrière cette production complexe se cachent de nombreuses tâches  :
+* collecte
+* compilation
+* traitement
+* publication.
+
+--
+
+Auxquelles s'ajoutent des contraintes administratives, légales et organistionnelles. C'est le **travail invisible de la donnée**, tel que décrit par Samuel Goëta ([Instaurer des données, instaurer des publics : une enquête sociologique dans les coulisses de l'open data](https://www.theses.fr/2016ENST0045), 2018).
+
+---
+
+### Comment l'Etat sait-il que vous existez ?
+
+--
+
+*.red[Le sachiez-tu ?]*
+> *"Le fait, pour une personne ayant assisté à un accouchement, de ne pas faire la déclaration prescrite par l'article 56 du code civil dans les délais fixés par l'article 55 du même code est puni de six mois d'emprisonnement et de 3 750 euros d'amende."*
+
+Source : [Article 433-18-1](https://www.legifrance.gouv.fr/affichCode.do?idSectionTA=LEGISCTA000006165376&cidTexte=LEGITEXT000006070719) du Code pénal.
+
+--
+
+Pareil pour l'université !
+
+---
+
+### La donnée est .red[produite]
+
+Collectées dans une but, les données servent une ou plusieurs fonctions (politique, sociale, économique ...).
+
+Elles doivent donc être adaptée aux méthodes et systèmes de traitement qui leur seront appliqués.
+
+.pull-left[
+.quote[*"Raw data is an oxymoron"*]
+]
+
+.pull-right[
+![](./img/raw_data_is_an_oxymoron.jpg)
+]
+
+---
+
+### Standard : la mise en donnée du monde
+
+La méthode de standardisation la plus courante est la **quantification**.
+
+Si elle n'est pas la seule, cette méthode consistant à **"réduire les choses à des nombres"** apparaît comme le symbole d'un mouvement plus général : **.red[la mise en donnée du monde]**, parfois qualifiée de **dataification**.
+
+.pull-left[
+> Le verbe quantifier est employé ici dans un sens large : **exprimer et
+faire exister sous une forme numérique ce qui, auparavant, était exprimé par
+des mots et non par des nombres**.
+]
+
+.pull-right[
+![](https://raw.githubusercontent.com/SylvainLapoix/ipj_dataliteracy/master/presentation/img/gouverner_par_les_nombres.jpg)
+]
+
+
+---
+
+### Convention
+
+.pull-left[
+.reduite[
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Metric_seal.svg/1024px-Metric_seal.svg.png)]
+]
+
+.pull-right[
+En 1875, 17 nations signent la **[Convention du mètre](https://www.bipm.org/fr/metre-convention)**, traité international d'initiative française visant à instaurer un début d'uniformité dans les systèmes de poids et mesures.
+
+Ce texte instaure un **Bureau international des poids et mesures** ([BIPM](https://www.bipm.org)) installé au Pavillon de Bréteuil, à Sèvres (Île-de-France). Il publie le Système International des unités (SI) et produit l'échelle de temps de référence (UTC).
+
+On y trouve également le *"kilo de Sèvres"* qui servait de référence au kilogramme, unité de mesure de base, jusqu'à quelques décennies.
+]
+
+---
+
+### La donnée se définit par .red[sa structure]
+
+.quote[*"Une donnée, c'est ce qu'on met dans un jeu de données"*, Emmanuel Didier, sociologue de la quantification]
+
+--
+
+De quoi s'agit-il ?
+
+![](img/menu_cantines_lr.png)
+
+--
+
+Réponse : [le menu de la restauration scolaire](https://opendata.agglo-larochelle.fr/visualisation/table/?id=79f82500-13a3-45a8-8907-504112ee67f0) de la ville de La Rochelle.
+
+---
+
+### Une grille de lecture : les statistiques
+
+Chaque élément d'un ensemble est appelé **observation**.
+
+Pour **définir** un objet, nous avons besoin de critères qui proposent une dimension descriptive et permettent de les différencier : des éléments discriminants (dans le sens propre du terme), que nous nommerons des **variables**.
+
+Nous renseignons chaque **variable** d'un terme, d'une quantité, d'une formule, d'un mot ... la forme même de ce mot est déterminante : c'est la **valeur** de la variable.
+
+Le fait de consigner ces **valeurs** pour ces **variables** produit une collection qui sert de base à l'analyse.
+
+Ces éléments enregistrés sur une personne, un événement, un lieu ou tout autre entité du monde réel, **ce sont des données**. Et leur collection **un jeu de données**.
+
+---
+
+background-image: url("https://media.giphy.com/media/l0Iy8hSJalxmgTOF2/giphy.gif")
+background-size: contains
+class: inverse, center
+
+
+### Des questions ?
+
+---
+
+background-image: url("https://media.giphy.com/media/yNr8LdsnuqdnfbgVXN/giphy.gif")
+background-size: contains
+class: inverse, center
+
+## 15 minutes de pause !
+
+---
+
+### Les types de données
+
+#### Selon vous, combien y a-t-il de types de données ?
+
+--
+
+En informatique, on distingue trois grandes catégories :
+* les données numériques (avec lesquelles on peut calculer) ;
+* les chaînes de caractères / strings ;
+* les données booléennes (ou données binaires).
+
+Vérifier si une condition est VRAI ou FAUSSE est la base de toute opération informatique. Le format binaire est le format de stockage informatique de base. Le *bit*, plus petite unité de stockage, ne peut contenir qu'une donnée des deux seuls types possibles :
+* OFF - 0 - FALSE - NOT SET ;
+* ON - 1 - TRUE - SET.
+
+Le code American Standard Code for Information Interchange (ASCII) utilise 8 bits, soit 128 combinaisons, permettant de stocker tout l'alphabet latin et quelques signes de ponctuations et signaux (NUL, DEL, TAB, etc.).
+
+---
+
+### Exercice : grille de présentation
+
+
+.quote[Listez par groupe les .red[8 données] qui vous paraissent pertinentes .red[pour vous présenter]
+]
+
+Les **données** sont ici entendues comme **atomiques**. Le prénom est une donnée, le nom en est une autre.
+
+.quote[Vous avez .red[5 minutes]].
+
+--
+
+Ha ha, changement de consigne !
+
+.center[
+![](https://media.giphy.com/media/9AIdwh5YqwUF6uvIgJ/giphy.gif)
+]
+
+---
+
+### Exercice : grille de présentation 2
+
+.quote[Passez votre grille au groupe de gauche, récupérez celle du groupe de droite et complétez-la pour chaque membre de votre groupe.]
+
+.quote[Quand tout le monde aura fini, nous procéderons à la restitution.]
+
+--
+
+Quelles différences d'approches avez-vous pu noter ?
+
+--
+
+**Le choix des variables modifie considérablement la représentation du monde par les données.**
+
+---
+
+background-image: url("https://media.giphy.com/media/vgtUplKVLFBLlhK1za/giphy.gif")
+background-size: contains
+class: inverse
+
+
+## II. Que savons-nous des réseaux sociaux ?
+
+.footnote[Et que savent-ils de nous ?]
+
+---
+
+### Exercice : analyse d'interface (1/2)
+
+.pull-left-narrow[
+J'ai envoyé [un tweet](https://twitter.com/SylvainLapoix/status/1571761579703603200) à l'occasion de ce cours.
+
+Ce faisait, j'ai transmis .red[**des données**] à la plateforme.
+
+.quote[Quelles données pouvez-vous identifier à partir de cette capture d'écran du tweet ?]
+]
+
+.pull-right-wide[
+.center[
+![](./img/tweet_dpan.png)
+]
+]
+
+---
+
+### Deux approches
+
+L'identification des données peut se faire suivant deux points de vues d'où découlent des données très différentes en nature et en quantité.
+
+.pull-left[
+**Données d'activité**
+
+Cette approche se base sur red[le point de vue de l'usage], autrement dit, celui de la personne qui utilise le service.
+
+Elle amène à identifier les données qui sont directement et explicitement fournies dans l'interface (texte, média, profil, etc.).
+
+Par conséquent, ces données s'avèrent facilement accessible et constituent la partie "visible" de l'application (front end).
+
+]
+
+
+.pull-right[
+**Données de fonctionnement**
+
+Cette approche adopte .red[le point de vue du fonctionnement], c'est-à-dire le mécanisme même de l'app.
+
+Elle élargit le spectre des données à tous les éléments générés pour permettre à l'application de fonctionner : données de compte, historique et nature des interactions, paramètres, etc.
+
+Ces données sont plus difficilement accessibles car elles relèvent de l'administration de la plateforme, partie "invisible" de l'app (tout du moins aux usager·ères).
+
+]
+
+---
+
+### L'interface "utilisateur"
+
+L'interface utilisateur ne comporte pas qu'un champs ou une entrée pour vos données.
+
+.center[
+![](./img/twitter_interface_utilisateur.png)
+]
+
+---
+
+### Que se passe-t-il quand vous interagissez avec un RS ?
+
+.center[
+![](./img/twitter_console_reseau.png)
+]
+
+---
+
+### Exercice : analyse d'interface (2/2)
+
+.pull-left-narrow[
+Cet exercice est le même que tout à l'heure mais, cette fois-ci, vous pouvez cliquer et explorer le site.
+
+.quote[Collectez autant de données que possible auxquelles ce site donne accès en .red[5 minutes].]
+]
+
+.pull-right-wide[
+.center[
+![](./img/tweet_dpan.png)
+]
+]
+
+---
+
+background-image: url("https://media.giphy.com/media/3o6Mb3PGeR7EufOgYo/giphy.gif")
+background-size: contains
+class: inverse
+
+
+## La prochaine fois ...
+
+---
+
+class: center, middle, inverse
+
+### Merci pour votre attention !
+
+#### *Contact : [Sylvain Lapoix](mailto:sylvain@datactivist.coop)*
