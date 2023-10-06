@@ -22,10 +22,6 @@ params:
 ---
 
 layout: true
-  
-
-`r paste0("<div class='my-footer'><span>", params$event, "</span> <center><div class=logo><img src='https://github.com/datactivist/slides_datactivist/raw/master/inst/rmarkdown/templates/xaringan/resources/img/fond_noir_monochrome.png' width='100px'></center></span></div>")` 
-
 
 <style type="text/css">
 
@@ -164,7 +160,7 @@ class: inverse
 ### L'effet "Derrière nos écrans de fumée"
 
 .center[
-![](img/derriere_nos_ecrans_de_fumee.png)
+![](../img/derriere_nos_ecrans_de_fumee.png)
 ]
 
 En 2020, le documentaire [Derrière nos écrans de fumée](https://www.youtube.com/watch?v=LrDXbCrSR68) (The social dilemma) relance le débat sur l'effet des applications, s'appuyant notamment sur le témoignage des "repentis de la tech".
@@ -174,7 +170,7 @@ En 2020, le documentaire [Derrière nos écrans de fumée](https://www.youtube.c
 ### Parenthèse SHS : un traitement qui n'est pas sans angle mort
 
 .center[
-![](img/serge_tisseron.png)
+![](../img/serge_tisseron.png)
 ]
 
 Ex. : Serge Tisseron, psychiatre, via [Urbania](https://www.youtube.com/watch?v=LrDXbCrSR68).
@@ -196,26 +192,7 @@ A cela s'ajoute les paramètres bien être qui donnent un renseignement complém
 
 .pull-right[
 .center[
-![](./img/bien_etre_numerique.png)
-]
-]
-
-
----
-
-### Proposition de méthode
-
-.pull-left[
-**1. collecte de données d'usage**
-
-![](img/exemple_data.png)
-]
-
-.pull-right[
-**2. visualisation**
-
-.center[
-![](img/exemple_datawrapper.png)
+![](../img/bien_etre_numerique.png)
 ]
 ]
 
@@ -224,7 +201,7 @@ A cela s'ajoute les paramètres bien être qui donnent un renseignement complém
 ### 1. Utilisation des données
 
 .pull-left[
-![](./img/conso_donnees_mobiles.png)
+![](../img/conso_donnees_mobiles.png)
 ]
 
 .pull-right[
@@ -239,7 +216,7 @@ A cela s'ajoute les paramètres bien être qui donnent un renseignement complém
 ### 2. Temps d'utilisation
 
 .pull-left[
-![](./img/temps_usage_app.png)
+![](../img/temps_usage_app.png)
 ]
 
 .pull-right[
@@ -254,7 +231,7 @@ A cela s'ajoute les paramètres bien être qui donnent un renseignement complém
 ### 3. Utilisation de la batterie
 
 .pull-left[
-![](./img/conso_batterie.png)
+![](../img/conso_batterie.png)
 ]
 
 .pull-right[
@@ -267,14 +244,17 @@ A cela s'ajoute les paramètres bien être qui donnent un renseignement complém
 
 ### Exercice : quantification comparative de la consommation de données
 
-.quote[
-1. réunissez dans un tableur les données sur le max d'app ;
-2. formalisez-les dans [Datawrapper]() ;
-3. analysez ces résultats.
+.pull-left[
+1. reprenez [le modèle partagé en Google Drive](https://docs.google.com/spreadsheets/d/1oVnXRePaJcJmatzuxuIwoC6XCgyLiywY6uSo7O8PRK4/edit?usp=sharing) ;
+2. remplissez chaque feuille : data, batterie et temps ;
+3. produisez un graph pour chaque app.
+]
+
+.pull-right[
+![](../img/eval_quanti_usage_app.png)
 ]
 
 Présentation dans 20 minutes.
-
 
 ---
 
@@ -291,7 +271,7 @@ class: inverse, center
 La youtubeuse et développeuse Amy Plant s'est penchée sur la question et propose une synthèse pratique et didactique des enjeux techniques sous-jacents dans sa vidéo : [Je traque un téléphone (caméra, micro, localisation, galerie photo trackers : explications)](https://www.youtube.com/watch?v=qbGEvj_jkNY).
 
 .center[
-![](img/amy_plant_trackers.png)
+![](../img/amy_plant_trackers.png)
 ]
 
 ---
@@ -299,7 +279,7 @@ La youtubeuse et développeuse Amy Plant s'est penchée sur la question et propo
 ### Le travail d'Exodus Privacy
 
 .center[
-![](./img/exodus_privacy_search.png)
+![](../img/exodus_privacy_search.png)
 ]
 
 Jettons un oeil à [leur moteur de recherche](https://reports.exodus-privacy.eu.org/fr/) pour voir ...
@@ -338,7 +318,6 @@ Au delà des données fournies volontairement par les usager·ères via l'interf
 
 ---
 
-
 background-image: url("https://media.giphy.com/media/3o6ZtfPLtu0KZmBQxq/giphy.gif")
 background-size: contains
 class: inverse, center
@@ -353,7 +332,7 @@ class: inverse, center
 Les politiques de respect de la vie privée des systèmes d'exploitation obligent désormais les apps à solliciter une *"permission to track"* (cf. [Apple dev](https://developer.apple.com/app-store/user-privacy-and-data-use/)), autrement dit, une autorisation à capter certaines données.
 
 .center[
-![](./img/permission_tracking_apple.png)
+![](../img/permission_tracking_apple.png)
 ]
 
 ---
@@ -361,7 +340,7 @@ Les politiques de respect de la vie privée des systèmes d'exploitation obligen
 ### La notion de "régime de partage"
 
 .pull-left[
-![](img/regime_de_partage.png)
+![](../img/regime_de_partage.png)
 ]
 
 .pull-right[
@@ -380,59 +359,91 @@ Mais le détail de à qui et pour quoi sont transférées les données n'est pas
 
 ---
 
-### Exercice : cartographie des autorisations
+background-image: url("https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3hxZjk5amhsMnM3ano4YXc3NWVkd2hxdDZ2MG16cmllcHo5aHAzNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/umbIrcUJbmuIUZ1e7M/giphy.gif")
+background-size: contains
+class: inverse, center
 
-.quote[
+## Mise en pratique : réclamez vos données !
+
+---
+
+### Vous avez des droits !
+
+Depuis l'adoption du Règlement général sur la protection des données (RGPD), tou·tes les citoyen·nes de l'Union européenne disposent de droits sur leurs données que nous détaillerons lors du prochain cours.
+
+--
+
+Dont le *droit au portage*
+
+.center[
+![](https://media.giphy.com/media/qPkOReBnmmETgX5RMs/giphy.gif)
+]
+
+---
+
+### La méthode
+
+Je vous demande de réaliser le **maximum de demande de récupération de données pour les applications installées sur votre téléphone**.
+
+.pull-left[
+Sur le modèle du tableur proposé (disponible sous format Excel et ODS [au lien que je vous transmets](https://nx26520.your-storageshare.de/s/s78GCwMZRR4GsLP)), vous noterez :
+
+1. le nom de l'app ;
+2. le chemin de navigation (le lien direct, s'il y en a un) ;
+3. le délais affiché (copié collé) ;
+4. la date et l'heure de réception du mail de demande ;
+5. la date et l'heure de réception du mail de mise à dispo ;
 
 ]
 
-Présentation dans 20 minutes.
+**Pour les dates**
+
+Ecrivez sous le format : YYYY-MM-DD HH:MM
+
+Sans quoi, ça va être inutilisable.
 
 ---
 
-background-image: url("https://media.giphy.com/media/l0Hlx0M5OI1ogTGo0/giphy.gif")
-background-size: contains
-class: inverse
+### Des questions ?
 
-# II. Le cadre juridique
+.pull-left[
 
----
+**Soyez attentif·ves**
 
-background-image: url("https://media.giphy.com/media/WS3kQlip00vwV8CXwQ/giphy.gif")
-background-size: contains
-class: inverse
+Certains téléchargement ne sont possibles que sur une durée limitée :
 
-## Connaissez-vous le RGPD ?
+![](../img/demande_data_fb.png)
 
 
----
-
-background-image: url("https://media.giphy.com/media/ZExxJPLQp1il0j115N/giphy.gif")
-background-size: contains
-class: inverse
-
-## Et si nous lisions les conditions générales d'utilisation de vos données ?
-
----
-
-### Exercice : tentative de lecture contextuelle des CGUs
-
-.quote[
-Suivant la liste d'applications sélectionnées :
-
-1. listez les occurrences du mot "data" / "données" pour relever la phrase où le terme est utilisé et la partie des règles ;
-2. proposez une traduction en français courant en documentant le contexte.
 ]
 
-Rendez-vous dans 30 minutes !
+.pull-right[
+**Bonus**
+
+Dans certains cas, il existe des tutos (ci-dessous [celui de Facebook](https://www.facebook.com/help/1701730696756992)) :
+
+![](../img/facebook_download_howto.png)
+
+]
 
 ---
 
-background-image: url("")
-background-size: contains
 class: inverse
 
-## Le RGPD
+.center[
+### NE TARDEZ PAS !
+
+![](https://media.giphy.com/media/XfnkZESrLoTTczhX2Z/giphy.gif)
+]
+
+Certaines demandes prennent **plus de quatre jours**.
+
+Si vous n'avez pas de données, vous ne pourrez pas participer au 4ème et dernier cours et je ne pourrai évaluer votre travail.
+
+
+.right[
+*Voilà, vous êtes prévenu·es.*
+]
 
 ---
 

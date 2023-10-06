@@ -1,8 +1,8 @@
 ---
 title: "Exploration de la société de la donnée"
 subtitle: "1 - la socialisation par la donnée"
-author: "Sylvain Lapoix (Datactivist)"
-date: "20/09/2022"
+author: "Sylvain Lapoix"
+date: "03/10/2023"
 output:
   SlidesDatactivist::moon_reader:
     css:
@@ -288,7 +288,7 @@ Elles doivent donc être adaptée aux méthodes et systèmes de traitement qui l
 ]
 
 .pull-right[
-![](./img/raw_data_is_an_oxymoron.jpg)
+![](../img/raw_data_is_an_oxymoron.jpg)
 ]
 
 ---
@@ -356,24 +356,6 @@ Nous renseignons chaque **variable** d'un terme, d'une quantité, d'une formule,
 Le fait de consigner ces **valeurs** pour ces **variables** produit une collection qui sert de base à l'analyse.
 
 Ces éléments enregistrés sur une personne, un événement, un lieu ou tout autre entité du monde réel, **ce sont des données**. Et leur collection **un jeu de données**.
-
----
-
-background-image: url("https://media.giphy.com/media/l0Iy8hSJalxmgTOF2/giphy.gif")
-background-size: contains
-class: inverse, center
-
-
-### Des questions ?
-
----
-
-background-image: url("https://media.giphy.com/media/yNr8LdsnuqdnfbgVXN/giphy.gif")
-background-size: contains
-class: inverse, center
-
-## 15 minutes de pause !
-
 ---
 
 ### Les types de données
@@ -429,97 +411,6 @@ Quelles différences d'approches avez-vous pu noter ?
 
 **Le choix des variables modifie considérablement la représentation du monde par les données.**
 
----
-
-background-image: url("https://media.giphy.com/media/vgtUplKVLFBLlhK1za/giphy.gif")
-background-size: contains
-class: inverse
-
-
-## II. Que savons-nous des réseaux sociaux ?
-
-.footnote[Et que savent-ils de nous ?]
-
----
-
-### Exercice : analyse d'interface (1/2)
-
-.pull-left-narrow[
-J'ai envoyé [un tweet](https://twitter.com/SylvainLapoix/status/1571761579703603200) à l'occasion de ce cours.
-
-Ce faisait, j'ai transmis .red[**des données**] à la plateforme.
-
-.quote[Quelles données pouvez-vous identifier à partir de cette capture d'écran du tweet ?]
-]
-
-.pull-right-wide[
-.center[
-![](./img/tweet_dpan.png)
-]
-]
-
----
-
-### Deux approches
-
-L'identification des données peut se faire suivant deux points de vues d'où découlent des données très différentes en nature et en quantité.
-
-.pull-left[
-**Données d'activité**
-
-Cette approche se base sur red[le point de vue de l'usage], autrement dit, celui de la personne qui utilise le service.
-
-Elle amène à identifier les données qui sont directement et explicitement fournies dans l'interface (texte, média, profil, etc.).
-
-Par conséquent, ces données s'avèrent facilement accessible et constituent la partie "visible" de l'application (front end).
-
-]
-
-
-.pull-right[
-**Données de fonctionnement**
-
-Cette approche adopte .red[le point de vue du fonctionnement], c'est-à-dire le mécanisme même de l'app.
-
-Elle élargit le spectre des données à tous les éléments générés pour permettre à l'application de fonctionner : données de compte, historique et nature des interactions, paramètres, etc.
-
-Ces données sont plus difficilement accessibles car elles relèvent de l'administration de la plateforme, partie "invisible" de l'app (tout du moins aux usager·ères).
-
-]
-
----
-
-### L'interface "utilisateur"
-
-L'interface utilisateur ne comporte pas qu'un champs ou une entrée pour vos données.
-
-.center[
-![](./img/twitter_interface_utilisateur.png)
-]
-
----
-
-### Que se passe-t-il quand vous interagissez avec un RS ?
-
-.center[
-![](./img/twitter_console_reseau.png)
-]
-
----
-
-### Exercice : analyse d'interface (2/2)
-
-.pull-left-narrow[
-Cet exercice est le même que tout à l'heure mais, cette fois-ci, vous pouvez cliquer et explorer le site.
-
-.quote[Collectez autant de données que possible auxquelles ce site donne accès en .red[5 minutes].]
-]
-
-.pull-right-wide[
-.center[
-![](./img/tweet_dpan.png)
-]
-]
 
 ---
 
