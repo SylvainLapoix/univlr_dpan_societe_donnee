@@ -1,8 +1,8 @@
 ---
 title: "Exploration de la société de la donnée"
 subtitle: "2 - la collecte des données"
-author: "Sylvain Lapoix (Datactivist)"
-date: "12/10/2022"
+author: "Sylvain Lapoix"
+date: "06/10/2023"
 output:
   SlidesDatactivist::moon_reader:
     css:
